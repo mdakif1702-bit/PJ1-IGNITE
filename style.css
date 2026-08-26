@@ -1264,3 +1264,173 @@ footer small {
     }
 
 }
+/* ================= CREDITS ================= */
+
+.credits {
+    padding: 120px 8%;
+    background: #050b14;
+}
+
+.credits-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.credits-header span {
+    color: #0095ff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.credits-header h2 {
+    margin-top: 15px;
+    font-size: clamp(45px, 7vw, 80px);
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.credits-header h2 b {
+    color: #b6ff00;
+}
+
+.credits-header p {
+    margin-top: 15px;
+    color: #718096;
+    font-size: 11px;
+}
+
+
+/* DEVELOPER CARD */
+
+.developer-card {
+    max-width: 750px;
+    margin: auto;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #102238,
+            #08121e
+        );
+
+    border: 1px solid #243b55;
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.developer-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #b6ff00;
+
+    box-shadow:
+        0 20px 60px
+        rgba(182,255,0,.08);
+}
+
+
+/* ICON */
+
+.developer-avatar {
+    width: 80px;
+    height: 80px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d1c2e;
+
+    border: 2px solid #0095ff;
+
+    font-size: 32px;
+}
+
+
+/* INFO */
+
+.developer-info {
+    flex: 1;
+}
+
+.developer-info small {
+    color: #0095ff;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.developer-info h3 {
+    margin-top: 7px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+}
+
+.developer-info p {
+    margin-top: 6px;
+
+    color: #718096;
+
+    font-size: 9px;
+}
+
+
+/* TAGS */
+
+.developer-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.developer-tag span {
+    padding: 6px 10px;
+
+    border: 1px solid #29415b;
+
+    border-radius: 5px;
+
+    color: #8592a5;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .developer-tag {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}

@@ -11,7 +11,7 @@ const albums = {
         title: "CLASS MOMENTS",
 
         photos: [
-            "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+            "images/class/class01.jpeg",
             "https://images.unsplash.com/photo-1521737711867-e3b97375f902",
             "https://images.unsplash.com/photo-1511632765486-a01980e01a18",
             "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",

@@ -12,11 +12,6 @@ const albums = {
 
         photos: [
             "images/class/class01.jpeg",
-            "https://images.unsplash.com/photo-1521737711867-e3b97375f902",
-            "https://images.unsplash.com/photo-1511632765486-a01980e01a18",
-            "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70",
-            "https://images.unsplash.com/photo-1543269865-cbf427effbad",
-            "https://images.unsplash.com/photo-1517457373958-b7bdd4587205"
         ]
 
     },

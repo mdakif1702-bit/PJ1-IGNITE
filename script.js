@@ -1,6 +1,6 @@
 /* ===============================
    PJ 1 | IGNITE
-   ALBUM SYSTEM + SUPABASE
+   SUPABASE PHOTO SYSTEM
 ================================ */
 
 
@@ -23,35 +23,33 @@ const supabaseClient =
 
 
 /* ===============================
+   STORAGE BUCKET
+================================ */
+
+const BUCKET_NAME =
+    "ignite-photos";
+
+
+/* ===============================
    ALBUMS
 ================================ */
 
 const albums = {
 
     class: {
-
-        title: "CLASS MOMENTS",
+        title: "CLASS MOMENTS"
     },
-
 
     sports: {
-
-        title: "SPORTS & ACTIVITIES",
-
+        title: "SPORTS & ACTIVITIES"
     },
-
 
     achievement: {
-
-        title: "ACHIEVEMENTS",
-
+        title: "ACHIEVEMENTS"
     },
 
-
     random: {
-
-        title: "RANDOM MOMENTS",
-
+        title: "RANDOM MOMENTS"
     }
 
 };
@@ -72,8 +70,6 @@ async function openAlbum(type) {
 
     currentAlbum = type;
 
-    const album = albums[type];
-
     const modal =
         document.getElementById("albumModal");
 
@@ -84,39 +80,130 @@ async function openAlbum(type) {
         document.getElementById("photos");
 
 
-    title.textContent = album.title;
-
-    photos.innerHTML = "";
-
-
-    /* OLD PHOTOS */
-
-    album.photos.forEach(function(url) {
-
-        createPhotoBox(
-            url,
-            album.title,
-            photos,
-            false
-        );
-
-    });
+    title.textContent =
+        albums[type].title;
 
 
-    /* SUPABASE PHOTOS */
-
-    await loadSupabasePhotos();
+    photos.innerHTML =
+        "<p class='loading'>LOADING PHOTOS...</p>";
 
 
     modal.classList.add("active");
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow =
+        "hidden";
+
+
+    await loadSupabasePhotos();
 
 }
 
 
 /* ===============================
-   CREATE PHOTO
+   LOAD SUPABASE PHOTOS
+================================ */
+
+async function loadSupabasePhotos() {
+
+    if (!currentAlbum) return;
+
+
+    const photos =
+        document.getElementById("photos");
+
+
+    photos.innerHTML = "";
+
+
+    const {
+        data,
+        error
+    } =
+        await supabaseClient
+            .storage
+            .from(BUCKET_NAME)
+            .list(
+                currentAlbum,
+                {
+                    limit: 100,
+
+                    sortBy: {
+                        column: "created_at",
+                        order: "desc"
+                    }
+                }
+            );
+
+
+    if (error) {
+
+        console.error(
+            "Error loading photos:",
+            error
+        );
+
+
+        photos.innerHTML =
+            "<p class='loading'>Unable to load photos.</p>";
+
+        return;
+
+    }
+
+
+    if (!data || data.length === 0) {
+
+        photos.innerHTML =
+            "<p class='loading'>NO PHOTOS YET 📸</p>";
+
+        return;
+
+    }
+
+
+    data.forEach(function(file) {
+
+        if (!file.name) return;
+
+
+        const filePath =
+            currentAlbum +
+            "/" +
+            file.name;
+
+
+        const {
+            data: publicUrlData
+        } =
+            supabaseClient
+                .storage
+                .from(BUCKET_NAME)
+                .getPublicUrl(
+                    filePath
+                );
+
+
+        createPhotoBox(
+
+            publicUrlData.publicUrl,
+
+            albums[currentAlbum].title,
+
+            photos,
+
+            true,
+
+            file.name
+
+        );
+
+    });
+
+}
+
+
+/* ===============================
+   CREATE PHOTO BOX
 ================================ */
 
 function createPhotoBox(
@@ -127,6 +214,7 @@ function createPhotoBox(
     fileName = ""
 ) {
 
+
     const box =
         document.createElement("div");
 
@@ -135,9 +223,11 @@ function createPhotoBox(
         document.createElement("img");
 
 
-    image.src = url;
+    image.src =
+        url;
 
-    image.alt = title;
+    image.alt =
+        title;
 
 
     box.appendChild(image);
@@ -160,12 +250,18 @@ function createPhotoBox(
             document.createElement("a");
 
 
-        download.href = url;
+        download.href =
+            url;
+
 
         download.download =
-            fileName || "ignite-photo";
+            fileName ||
+            "ignite-photo";
 
-        download.target = "_blank";
+
+        download.target =
+            "_blank";
+
 
         download.textContent =
             "⬇ DOWNLOAD";
@@ -194,97 +290,15 @@ function createPhotoBox(
 
 
 /* ===============================
-   LOAD SUPABASE PHOTOS
-================================ */
-
-async function loadSupabasePhotos() {
-
-    if (!currentAlbum) return;
-
-
-    const photos =
-        document.getElementById("photos");
-
-
-    const {
-        data,
-        error
-    } =
-        await supabaseClient.storage
-            .from("ignite-photos")
-            .list(currentAlbum, {
-
-                limit: 100,
-
-                sortBy: {
-                    column: "created_at",
-                    order: "desc"
-                }
-
-            });
-
-
-    if (error) {
-
-        console.error(
-            "Error loading Supabase photos:",
-            error
-        );
-
-        return;
-
-    }
-
-
-    if (!data) return;
-
-
-    data.forEach(function(file) {
-
-        if (!file.name) return;
-
-
-        const filePath =
-            currentAlbum +
-            "/" +
-            file.name;
-
-
-        const {
-            data: publicUrlData
-        } =
-            supabaseClient.storage
-                .from("ignite-photos")
-                .getPublicUrl(filePath);
-
-
-        createPhotoBox(
-
-            publicUrlData.publicUrl,
-
-            albums[currentAlbum].title,
-
-            photos,
-
-            true,
-
-            file.name
-
-        );
-
-    });
-
-}
-
-
-/* ===============================
    UPLOAD PHOTO
 ================================ */
 
 async function uploadPhoto() {
 
     const input =
-        document.getElementById("photoInput");
+        document.getElementById(
+            "photoInput"
+        );
 
 
     const file =
@@ -293,6 +307,8 @@ async function uploadPhoto() {
 
     if (!file) return;
 
+
+    /* CHECK ALBUM */
 
     if (!currentAlbum) {
 
@@ -322,9 +338,12 @@ async function uploadPhoto() {
     }
 
 
-    /* FILE SIZE - MAX 10MB */
+    /* MAX 10MB */
 
-    if (file.size > 10 * 1024 * 1024) {
+    if (
+        file.size >
+        10 * 1024 * 1024
+    ) {
 
         alert(
             "Image is too large. Maximum size is 10MB."
@@ -337,12 +356,18 @@ async function uploadPhoto() {
     }
 
 
-    /* FILE NAME */
+    /* CLEAN FILE NAME */
 
     const safeName =
         file.name
-            .replace(/\s+/g, "-")
-            .replace(/[^a-zA-Z0-9._-]/g, "");
+            .replace(
+                /\s+/g,
+                "-"
+            )
+            .replace(
+                /[^a-zA-Z0-9._-]/g,
+                ""
+            );
 
 
     const fileName =
@@ -367,8 +392,9 @@ async function uploadPhoto() {
         const {
             error
         } =
-            await supabaseClient.storage
-                .from("ignite-photos")
+            await supabaseClient
+                .storage
+                .from(BUCKET_NAME)
                 .upload(
                     filePath,
                     file
@@ -401,7 +427,7 @@ async function uploadPhoto() {
 
         /* REFRESH */
 
-        await refreshAlbum();
+        await loadSupabasePhotos();
 
     }
 
@@ -416,49 +442,6 @@ async function uploadPhoto() {
         );
 
     }
-
-}
-
-
-/* ===============================
-   REFRESH ALBUM
-================================ */
-
-async function refreshAlbum() {
-
-    if (!currentAlbum) return;
-
-
-    const photos =
-        document.getElementById("photos");
-
-
-    photos.innerHTML = "";
-
-
-    /* OLD PHOTOS */
-
-    albums[currentAlbum].photos
-        .forEach(function(url) {
-
-            createPhotoBox(
-
-                url,
-
-                albums[currentAlbum].title,
-
-                photos,
-
-                false
-
-            );
-
-        });
-
-
-    /* SUPABASE */
-
-    await loadSupabasePhotos();
 
 }
 

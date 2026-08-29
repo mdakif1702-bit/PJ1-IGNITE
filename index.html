@@ -381,7 +381,7 @@
 
         <div class="member">
             <div class="member-photo">👤</div>
-            <h4> MUHAMMAD ANAF BIN MOHD ASRI </h4>
+            <h4>MUHAMMAD ANAF BIN MOHD ASRI</h4>
             <p>IGNITE</p>
         </div>
 
@@ -417,13 +417,13 @@
 
         <div class="member">
             <div class="member-photo">👤</div>
-            <h4> NUR ARISSA BINTI MOHD NASRUL HISYAM</h4>
+            <h4>NUR ARISSA BINTI MOHD NASRUL HISYAM</h4>
             <p>IGNITE</p>
         </div>
 
         <div class="member">
             <div class="member-photo">👤</div>
-            <h4>NUR HIDAYAH BINTI ZULKIFLE </h4>
+            <h4>NUR HIDAYAH BINTI ZULKIFLE</h4>
             <p>IGNITE</p>
         </div>
 
@@ -462,7 +462,7 @@
 </section>
 
 
-<!-- ================= LIFE IN IGNITE ================= -->
+<!-- ================= GALLERY ================= -->
 
 <section id="gallery" class="section gallery">
 
@@ -482,7 +482,6 @@
 
 
     <div class="folders">
-
 
         <div class="folder" onclick="openAlbum('class')">
 
@@ -567,7 +566,6 @@
 
         </div>
 
-
     </div>
 
 </section>
@@ -597,6 +595,30 @@
 
         </div>
 
+
+        <!-- ADD PHOTO -->
+
+        <div class="album-actions">
+
+            <input
+                type="file"
+                id="photoInput"
+                accept="image/*"
+                hidden
+                onchange="uploadPhoto()"
+            >
+
+            <button
+                class="add-photo-btn"
+                onclick="document.getElementById('photoInput').click()"
+            >
+                + ADD PHOTO
+            </button>
+
+        </div>
+
+
+        <!-- PHOTOS -->
 
         <div id="photos" class="photos">
 
@@ -639,6 +661,7 @@
 
 </section>
 
+
 <!-- ================= FOOTER ================= -->
 
 <footer>
@@ -659,6 +682,12 @@
 
 </footer>
 
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- YOUR JAVASCRIPT -->
 
 <script src="script.js"></script>
 

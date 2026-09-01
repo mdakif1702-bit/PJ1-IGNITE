@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #E5E7EB;
-    color: #172033;
+    background: #F4F6F5;
+    color: #183039;
     overflow-x: hidden;
 }
 
@@ -35,7 +35,7 @@ body {
 
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid #D1D5DB;
+    border-bottom: 1px solid #D3D9D9;
 
     z-index: 1000;
 }
@@ -43,11 +43,11 @@ body {
 .logo {
     font-size: 23px;
     font-weight: 900;
-    color: #172033;
+    color: #061923;
 }
 
 .logo span {
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .nav-links {
@@ -57,7 +57,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #64748B;
+    color: #718083;
 
     font-size: 9px;
     font-weight: 900;
@@ -68,7 +68,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #2563EB;
+    color: #527C7D;
 }
 
 
@@ -90,8 +90,8 @@ body {
     background:
         radial-gradient(
             circle at 80% 50%,
-            rgba(37,99,235,0.09),
-            transparent 30%
+            rgba(138,188,181,0.18),
+            transparent 32%
         );
 }
 
@@ -106,7 +106,7 @@ body {
     font-weight: 900;
     font-style: italic;
 
-    color: rgba(23,32,51,0.035);
+    color: rgba(6,25,35,0.035);
 
     pointer-events: none;
 }
@@ -124,7 +124,7 @@ body {
     align-items: center;
     gap: 10px;
 
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 9px;
     font-weight: 900;
@@ -138,7 +138,7 @@ body {
 
     border-radius: 50%;
 
-    background: #38BDF8;
+    background: #8ABCB5;
 }
 
 .hero h1 {
@@ -152,11 +152,11 @@ body {
 
     letter-spacing: -10px;
 
-    color: #172033;
+    color: #061923;
 }
 
 .hero h1 strong {
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .hero h2 {
@@ -168,7 +168,7 @@ body {
 
     font-style: italic;
 
-    color: #60A5FA;
+    color: #8ABCB5;
 
     letter-spacing: -5px;
 }
@@ -178,7 +178,7 @@ body {
 
     margin-top: 30px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 13px;
 
@@ -209,9 +209,9 @@ body {
 }
 
 .btn-main {
-    color: white;
+    color: #FFFFFF;
 
-    background: #2563EB;
+    background: #527C7D;
 
     border-radius: 8px;
 }
@@ -219,25 +219,29 @@ body {
 .btn-main:hover {
     transform: translateY(-5px);
 
+    background: #08333D;
+
     box-shadow:
         0 15px 30px
-        rgba(37,99,235,.18);
+        rgba(82,124,125,.20);
 }
 
 .btn-outline {
-    color: #172033;
+    color: #183039;
 
-    border: 1px solid #D1D5DB;
+    border: 1px solid #D3D9D9;
 
     border-radius: 8px;
 
-    background: white;
+    background: #FFFFFF;
 }
 
 .btn-outline:hover {
-    color: #2563EB;
+    color: #527C7D;
 
-    border-color: #2563EB;
+    border-color: #8ABCB5;
+
+    background: #F8FAFA;
 }
 
 
@@ -251,12 +255,12 @@ body {
 
     flex-shrink: 0;
 
-    border: 1px solid rgba(37,99,235,.25);
+    border: 1px solid rgba(82,124,125,.35);
 
     border-radius: 50%;
 
     box-shadow:
-        0 0 80px rgba(37,99,235,.08);
+        0 0 80px rgba(138,188,181,.18);
 
     animation: floating 5s ease-in-out infinite;
 }
@@ -268,7 +272,7 @@ body {
 
     inset: 55px;
 
-    border: 1px solid rgba(56,189,248,.30);
+    border: 1px solid rgba(138,188,181,.45);
 
     border-radius: 50%;
 }
@@ -280,7 +284,7 @@ body {
 
     inset: 120px;
 
-    border: 1px dashed rgba(23,32,51,.12);
+    border: 1px dashed rgba(6,25,35,.14);
 
     border-radius: 50%;
 }
@@ -304,12 +308,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: white;
+    background: #FFFFFF;
 
-    border: 2px solid #2563EB;
+    border: 2px solid #527C7D;
 
     box-shadow:
-        0 10px 40px rgba(37,99,235,.12);
+        0 10px 40px rgba(82,124,125,.15);
 
     z-index: 3;
 }
@@ -317,7 +321,7 @@ body {
 .circle-center b {
     font-size: 35px;
 
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .circle-center small {
@@ -325,7 +329,7 @@ body {
 
     letter-spacing: 2px;
 
-    color: #64748B;
+    color: #718083;
 }
 
 .symbol {
@@ -341,9 +345,9 @@ body {
 
     border-radius: 50%;
 
-    background: white;
+    background: #FFFFFF;
 
-    border: 1px solid #D1D5DB;
+    border: 1px solid #D3D9D9;
 
     font-size: 30px;
 
@@ -351,16 +355,17 @@ body {
 
     transition: .3s;
 
-    box-shadow: 0 8px 25px rgba(23,32,51,.07);
+    box-shadow:
+        0 8px 25px rgba(6,25,35,.07);
 }
 
 .symbol:hover {
     transform: scale(1.2);
 
-    border-color: #2563EB;
+    border-color: #527C7D;
 
     box-shadow:
-        0 12px 30px rgba(37,99,235,.15);
+        0 12px 30px rgba(82,124,125,.18);
 }
 
 .symbol-top {
@@ -399,9 +404,9 @@ body {
 
     white-space: nowrap;
 
-    background: #172033;
+    background: #08333D;
 
-    color: white;
+    color: #FFFFFF;
 
     text-align: center;
 
@@ -424,11 +429,11 @@ body {
 }
 
 .about {
-    background: #F8FAFC;
+    background: #FFFFFF;
 }
 
 .heading small {
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 9px;
 
@@ -448,17 +453,17 @@ body {
 
     letter-spacing: -3px;
 
-    color: #172033;
+    color: #061923;
 }
 
 .heading h2 span {
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .heading p {
     margin-top: 15px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 12px;
 }
@@ -483,7 +488,7 @@ body {
 .about-text p {
     margin-bottom: 25px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 14px;
 
@@ -491,7 +496,7 @@ body {
 }
 
 .about-text b {
-    color: #172033;
+    color: #183039;
 }
 
 .stats {
@@ -510,7 +515,7 @@ body {
 
     background: #FFFFFF;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     border-radius: 12px;
 
@@ -520,7 +525,10 @@ body {
 .stats div:hover {
     transform: translateY(-7px);
 
-    border-color: #2563EB;
+    border-color: #8ABCB5;
+
+    box-shadow:
+        0 10px 30px rgba(82,124,125,.08);
 }
 
 .stats strong {
@@ -528,13 +536,13 @@ body {
 
     font-size: 38px;
 
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .stats span {
     font-size: 8px;
 
-    color: #64748B;
+    color: #718083;
 
     font-weight: 900;
 
@@ -545,7 +553,7 @@ body {
 /* ================= TEAM ================= */
 
 .team {
-    background: #E5E7EB;
+    background: #F0F3F3;
 }
 
 .team .heading {
@@ -553,7 +561,7 @@ body {
 }
 
 
-/* MENTOR */
+/* ================= MENTOR ================= */
 
 .mentor-card {
     max-width: 450px;
@@ -568,10 +576,10 @@ body {
 
     background: #FFFFFF;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     box-shadow:
-        0 15px 45px rgba(23,32,51,.06);
+        0 15px 45px rgba(6,25,35,.06);
 }
 
 .badge {
@@ -581,9 +589,9 @@ body {
 
     border-radius: 30px;
 
-    background: #EFF6FF;
+    background: #E3F0EE;
 
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 8px;
 
@@ -593,9 +601,9 @@ body {
 }
 
 .badge.blue {
-    color: #2563EB;
+    color: #527C7D;
 
-    background: #EFF6FF;
+    background: #E3F0EE;
 }
 
 .mentor-photo {
@@ -611,9 +619,9 @@ body {
 
     border-radius: 50%;
 
-    background: #F1F3F5;
+    background: #F0F3F3;
 
-    border: 2px solid #2563EB;
+    border: 2px solid #527C7D;
 
     font-size: 55px;
 }
@@ -621,13 +629,13 @@ body {
 .mentor-card h3 {
     font-size: 20px;
 
-    color: #172033;
+    color: #183039;
 }
 
 .mentor-card p {
     margin-top: 8px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 10px;
 }
@@ -638,11 +646,11 @@ body {
 
     margin: 20px auto;
 
-    background: #38BDF8;
+    background: #8ABCB5;
 }
 
 .mentor-card small {
-    color: #94A3B8;
+    color: #8A9698;
 
     font-size: 7px;
 
@@ -652,7 +660,7 @@ body {
 }
 
 
-/* LEADERS */
+/* ================= LEADERS ================= */
 
 .leaders {
     max-width: 850px;
@@ -674,20 +682,20 @@ body {
 
     background: #FFFFFF;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     border-radius: 18px;
 
     transition: .3s;
 
     box-shadow:
-        0 10px 35px rgba(23,32,51,.04);
+        0 10px 35px rgba(6,25,35,.04);
 }
 
 .leader-card:hover {
     transform: translateY(-7px);
 
-    border-color: #2563EB;
+    border-color: #8ABCB5;
 }
 
 .leader-photo {
@@ -703,34 +711,34 @@ body {
 
     border-radius: 50%;
 
-    background: #F1F3F5;
+    background: #F0F3F3;
 
-    border: 2px solid #2563EB;
+    border: 2px solid #527C7D;
 
     font-size: 45px;
 }
 
 .leader-card:nth-child(2)
 .leader-photo {
-    border-color: #38BDF8;
+    border-color: #8ABCB5;
 }
 
 .leader-card h3 {
     font-size: 16px;
 
-    color: #172033;
+    color: #183039;
 }
 
 .leader-card p {
     margin-top: 7px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 9px;
 }
 
 
-/* MEMBERS */
+/* ================= MEMBERS ================= */
 
 .member-title {
     display: flex;
@@ -747,13 +755,13 @@ body {
 
     height: 1px;
 
-    background: #D1D5DB;
+    background: #D3D9D9;
 }
 
 .member-title h3 {
     font-size: 9px;
 
-    color: #64748B;
+    color: #718083;
 
     letter-spacing: 2px;
 }
@@ -774,20 +782,20 @@ body {
 
     background: #FFFFFF;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     border-radius: 14px;
 
     transition: .3s;
 
     box-shadow:
-        0 8px 25px rgba(23,32,51,.04);
+        0 8px 25px rgba(6,25,35,.04);
 }
 
 .member:hover {
     transform: translateY(-7px);
 
-    border-color: #2563EB;
+    border-color: #8ABCB5;
 }
 
 .member-photo {
@@ -798,7 +806,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: #F1F3F5;
+    background: #E9EEEE;
 
     font-size: 55px;
 }
@@ -808,13 +816,13 @@ body {
 
     font-size: 12px;
 
-    color: #172033;
+    color: #183039;
 }
 
 .member p {
     margin: 7px 0 18px;
 
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 7px;
 
@@ -827,7 +835,7 @@ body {
 /* ================= GALLERY ================= */
 
 .gallery {
-    background: #F8FAFC;
+    background: #FFFFFF;
 }
 
 .gallery .heading {
@@ -864,9 +872,9 @@ body {
 
     overflow: hidden;
 
-    background: #E5E7EB;
+    background: #E9EEEE;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     border-radius: 18px;
 
@@ -876,11 +884,13 @@ body {
 .folder:hover {
     transform: translateY(-8px);
 
-    border-color: #2563EB;
+    border-color: #8ABCB5;
+
+    background: #F4F8F7;
 
     box-shadow:
         0 20px 50px
-        rgba(37,99,235,.10);
+        rgba(82,124,125,.10);
 }
 
 .folder-icon {
@@ -892,13 +902,13 @@ body {
 .folder h3 {
     font-size: 16px;
 
-    color: #172033;
+    color: #183039;
 }
 
 .folder p {
     margin-top: 7px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 10px;
 }
@@ -906,7 +916,7 @@ body {
 .folder b {
     margin-top: 18px;
 
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 8px;
 
@@ -929,7 +939,7 @@ body {
     padding: 25px;
 
     background:
-        rgba(23,32,51,.55);
+        rgba(6,25,35,.55);
 
     backdrop-filter: blur(12px);
 
@@ -953,12 +963,12 @@ body {
 
     background: #FFFFFF;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 
     border-radius: 20px;
 
     box-shadow:
-        0 30px 80px rgba(23,32,51,.15);
+        0 30px 80px rgba(6,25,35,.15);
 }
 
 .album-top {
@@ -972,7 +982,7 @@ body {
 }
 
 .album-top small {
-    color: #2563EB;
+    color: #527C7D;
 
     font-size: 8px;
 
@@ -986,7 +996,7 @@ body {
 
     font-size: 28px;
 
-    color: #172033;
+    color: #183039;
 }
 
 .album-top button,
@@ -996,11 +1006,11 @@ body {
 
     border-radius: 50%;
 
-    border: 1px solid #D1D5DB;
+    border: 1px solid #D3D9D9;
 
-    background: #E5E7EB;
+    background: #E9EEEE;
 
-    color: #172033;
+    color: #183039;
 
     cursor: pointer;
 
@@ -1011,9 +1021,11 @@ body {
 
 .album-top button:hover,
 .image-modal button:hover {
-    background: #2563EB;
+    background: #527C7D;
 
-    color: white;
+    color: #FFFFFF;
+
+    border-color: #527C7D;
 }
 
 
@@ -1032,9 +1044,9 @@ body {
 
     border: none;
 
-    background: #2563EB;
+    background: #527C7D;
 
-    color: white;
+    color: #FFFFFF;
 
     font-family: 'Montserrat', sans-serif;
 
@@ -1054,9 +1066,11 @@ body {
 .add-photo-btn:hover {
     transform: translateY(-4px);
 
+    background: #08333D;
+
     box-shadow:
         0 12px 25px
-        rgba(37,99,235,.18);
+        rgba(82,124,125,.20);
 }
 
 
@@ -1082,7 +1096,7 @@ body {
 
     cursor: pointer;
 
-    border: 1px solid #D5DAE1;
+    border: 1px solid #D3D9D9;
 }
 
 .photos img {
@@ -1111,9 +1125,9 @@ body {
 
     background: rgba(255,255,255,.95);
 
-    border: 1px solid #2563EB;
+    border: 1px solid #527C7D;
 
-    color: #2563EB;
+    color: #527C7D;
 
     text-decoration: none;
 
@@ -1129,9 +1143,9 @@ body {
 }
 
 .download-photo:hover {
-    background: #2563EB;
+    background: #527C7D;
 
-    color: white;
+    color: #FFFFFF;
 }
 
 
@@ -1148,7 +1162,7 @@ body {
     justify-content: center;
 
     background:
-        rgba(23,32,51,.90);
+        rgba(6,25,35,.92);
 
     z-index: 7000;
 }
@@ -1184,7 +1198,7 @@ body {
     background:
         radial-gradient(
             circle,
-            rgba(37,99,235,.08),
+            rgba(138,188,181,.16),
             transparent 50%
         );
 }
@@ -1192,7 +1206,7 @@ body {
 .quote > div {
     font-size: 35px;
 
-    color: #2563EB;
+    color: #527C7D;
 }
 
 .quote h2 {
@@ -1206,13 +1220,13 @@ body {
 
     font-weight: 900;
 
-    color: #172033;
+    color: #061923;
 }
 
 .quote p {
     margin-top: 25px;
 
-    color: #64748B;
+    color: #718083;
 
     font-size: 9px;
 
@@ -1227,25 +1241,25 @@ footer {
 
     text-align: center;
 
-    background: #172033;
+    background: #061923;
 
-    border-top: 1px solid #253149;
+    border-top: 1px solid #08333D;
 }
 
 footer h3 {
     font-size: 23px;
 
-    color: white;
+    color: #FFFFFF;
 }
 
 footer h3 span {
-    color: #38BDF8;
+    color: #8ABCB5;
 }
 
 footer p {
     margin-top: 12px;
 
-    color: #CBD5E1;
+    color: #D3D9D9;
 
     font-size: 9px;
 }
@@ -1256,11 +1270,11 @@ footer div {
 
     margin: 22px auto;
 
-    background: #2563EB;
+    background: #527C7D;
 }
 
 footer small {
-    color: #94A3B8;
+    color: #8A9698;
 
     font-size: 8px;
 }

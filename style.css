@@ -1385,3 +1385,269 @@ footer small {
     }
 
 }
+
+/* ================= TEAM UPGRADE ================= */
+
+.team {
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle background decoration */
+
+.team::before {
+    content: "IGNITE";
+    position: absolute;
+    top: 100px;
+    right: -100px;
+
+    font-size: 180px;
+    font-weight: 900;
+    font-style: italic;
+
+    color: rgba(20, 40, 55, 0.035);
+
+    pointer-events: none;
+}
+
+/* TEAM STATS */
+
+.team-stats {
+    max-width: 900px;
+    margin: 55px auto 75px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: white;
+
+    border: 1px solid #dce5e7;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(20,40,55,.05);
+}
+
+.team-stat {
+    padding: 28px 15px;
+
+    text-align: center;
+
+    border-right: 1px solid #e5ebed;
+}
+
+.team-stat:last-child {
+    border-right: none;
+}
+
+.team-stat strong {
+    display: block;
+
+    font-size: 34px;
+    font-weight: 900;
+
+    color: #102a3a;
+}
+
+.team-stat span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #7a8a91;
+}
+
+/* SECTION LABEL */
+
+.team-label {
+    max-width: 1050px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.team-label span {
+    font-size: 11px;
+    font-weight: 900;
+
+    color: #0095a8;
+}
+
+.team-label div {
+    flex: 1;
+
+    height: 1px;
+
+    background: #d9e3e5;
+}
+
+.team-label b {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #66777e;
+}
+
+/* MENTOR */
+
+.mentor-card {
+    position: relative;
+
+    background: white !important;
+
+    border: 1px solid #d8e2e4 !important;
+
+    box-shadow: 0 20px 50px rgba(20,40,55,.07);
+
+    border-radius: 22px !important;
+
+    overflow: hidden;
+}
+
+.mentor-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #0095a8,
+        #b6ff00
+    );
+}
+
+/* LEADERS */
+
+.leaders {
+    margin-top: 45px !important;
+    margin-bottom: 75px !important;
+}
+
+.leader-card {
+    background: white !important;
+
+    border: 1px solid #d8e2e4 !important;
+
+    box-shadow: 0 15px 40px rgba(20,40,55,.05);
+
+    border-radius: 20px !important;
+}
+
+.leader-card:hover {
+    border-color: #0095a8 !important;
+
+    box-shadow: 0 20px 45px rgba(0,149,168,.10);
+}
+
+/* MEMBERS INTRO */
+
+.members-intro {
+    max-width: 1050px;
+
+    margin: 0 auto 35px;
+}
+
+.members-intro h3 {
+    font-size: 34px;
+
+    font-weight: 900;
+
+    color: #102a3a;
+
+    letter-spacing: -1px;
+}
+
+.members-intro h3 span {
+    color: #0095a8;
+}
+
+.members-intro p {
+    margin-top: 8px;
+
+    color: #7a8a91;
+
+    font-size: 11px;
+
+    letter-spacing: .5px;
+}
+
+/* MEMBER CARDS */
+
+.member {
+    background: white !important;
+
+    border: 1px solid #dce5e7 !important;
+
+    box-shadow: 0 10px 30px rgba(20,40,55,.04);
+
+    border-radius: 16px !important;
+}
+
+.member:hover {
+    border-color: #0095a8 !important;
+
+    box-shadow: 0 15px 35px rgba(0,149,168,.10);
+}
+
+.member-photo {
+    background:
+        linear-gradient(
+            145deg,
+            #eef4f5,
+            #e4edef
+        ) !important;
+
+    color: #344e5d;
+}
+
+/* MEMBER NAME */
+
+.member h4 {
+    color: #102a3a;
+}
+
+/* MEMBER LABEL */
+
+.member p {
+    color: #0095a8 !important;
+}
+
+
+/* ================= MOBILE TEAM ================= */
+
+@media(max-width: 700px) {
+
+    .team-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-stat:nth-child(2) {
+        border-right: none;
+    }
+
+    .team-stat:nth-child(1),
+    .team-stat:nth-child(2) {
+        border-bottom: 1px solid #e5ebed;
+    }
+
+    .members-intro h3 {
+        font-size: 28px;
+    }
+
+}

@@ -1,5 +1,5 @@
 /* ===============================
-   PJ 1 | IGNITE
+   JEKO MEMBERS
    SUPABASE PHOTO SYSTEM
 ================================ */
 
@@ -256,7 +256,7 @@ function createPhotoBox(
 
         download.download =
             fileName ||
-            "ignite-photo";
+            "jeko-members-photo";
 
 
         download.target =

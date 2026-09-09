@@ -41,9 +41,10 @@ body {
 }
 
 .logo {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 900;
     color: #061923;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -52,7 +53,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 24px;
 }
 
 .nav-links a {
@@ -62,9 +63,10 @@ body {
     font-size: 9px;
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -550,6 +552,79 @@ body {
 }
 
 
+/* ================= VISION & MISSION ================= */
+
+.vision-mission {
+    background: #F0F3F3;
+}
+
+.vm-grid {
+    max-width: 950px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.vm-card {
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D3D9D9;
+
+    border-radius: 20px;
+
+    transition: .3s;
+
+    box-shadow:
+        0 15px 40px rgba(6,25,35,.05);
+}
+
+.vm-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #8ABCB5;
+}
+
+.vm-icon {
+    font-size: 40px;
+}
+
+.vm-card h3 {
+    margin-top: 18px;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    color: #061923;
+}
+
+.vm-card p {
+    margin-top: 20px;
+
+    color: #718083;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ================= ADVISOR ================= */
+
+.advisor {
+    background: #FFFFFF;
+}
+
+
 /* ================= TEAM ================= */
 
 .team {
@@ -561,7 +636,7 @@ body {
 }
 
 
-/* ================= MENTOR ================= */
+/* ================= MENTOR / ADVISOR CARD ================= */
 
 .mentor-card {
     max-width: 450px;
@@ -675,6 +750,13 @@ body {
     gap: 20px;
 }
 
+.exec-leaders {
+    max-width: 1100px;
+
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
 .leader-card {
     padding: 30px;
 
@@ -718,11 +800,6 @@ body {
     font-size: 45px;
 }
 
-.leader-card:nth-child(2)
-.leader-photo {
-    border-color: #8ABCB5;
-}
-
 .leader-card h3 {
     font-size: 16px;
 
@@ -735,6 +812,110 @@ body {
     color: #718083;
 
     font-size: 9px;
+}
+
+
+/* ================= COMMITTEES ================= */
+
+.committee-grid {
+    max-width: 1100px;
+
+    margin: 25px auto 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+.committee-card {
+    padding: 28px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D3D9D9;
+
+    border-radius: 16px;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 25px rgba(6,25,35,.04);
+}
+
+.committee-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #8ABCB5;
+}
+
+.committee-icon {
+    font-size: 30px;
+}
+
+.committee-card h4 {
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #527C7D;
+}
+
+.committee-card ul {
+    margin-top: 15px;
+
+    list-style: none;
+}
+
+.committee-card li {
+    padding: 8px 0;
+
+    font-size: 12px;
+
+    color: #183039;
+
+    border-top: 1px solid #E9EEEE;
+}
+
+.committee-card li:first-child {
+    border-top: none;
+}
+
+
+/* ================= MEMBERS NOTE ================= */
+
+.members-note {
+    max-width: 750px;
+
+    margin: 10px auto 0;
+
+    padding: 28px 35px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D3D9D9;
+
+    border-radius: 16px;
+}
+
+.members-note p {
+    color: #718083;
+
+    font-size: 12.5px;
+
+    line-height: 1.9;
+}
+
+.members-note strong {
+    color: #527C7D;
 }
 
 
@@ -1330,6 +1511,20 @@ footer small {
             repeat(2,1fr);
     }
 
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exec-leaders {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .committee-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
 }
 
 
@@ -1353,6 +1548,14 @@ footer small {
     }
 
     .leaders {
+        grid-template-columns: 1fr;
+    }
+
+    .exec-leaders {
+        grid-template-columns: 1fr;
+    }
+
+    .committee-grid {
         grid-template-columns: 1fr;
     }
 

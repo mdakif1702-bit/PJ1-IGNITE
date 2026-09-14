@@ -1480,9 +1480,7 @@ footer {
         display: none;
     }
 
-    .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
+}
 
     .about-content {
         grid-template-columns: 1fr;

@@ -442,7 +442,7 @@ body {
 }
 
 .hstat {
-    padding: 26px 18px;
+    padding: 26px 14px;
     text-align: center;
 
     background: rgba(255, 255, 255, 0.05);
@@ -471,9 +471,9 @@ body {
 .hstat span {
     display: block;
     margin-top: 6px;
-    font-size: 8.5px;
+    font-size: 7.5px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: rgba(255, 255, 255, 0.62);
 }
 
@@ -906,6 +906,7 @@ body {
     object-fit: cover;
     display: block;
 }
+.member-photo {
     width: 74px;
     height: 74px;
     margin: 0 auto;
@@ -1479,8 +1480,6 @@ footer {
     .sport-circle {
         display: none;
     }
-
-}
 
     .about-content {
         grid-template-columns: 1fr;

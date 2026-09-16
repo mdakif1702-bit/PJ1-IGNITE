@@ -477,11 +477,13 @@ body {
     color: rgba(255, 255, 255, 0.62);
 }
 
-
-/* ================= RUNNING BAR ================= */
+/* ==================== RUNNING BAR ==================== */
 
 .running-bar {
-    padding: 78px 14px 14px;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 20px;
 
     overflow: hidden;
     white-space: nowrap;
@@ -494,13 +496,17 @@ body {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 2px;
+
+    position: relative;
+    z-index: 2;
+
+    margin-top: 40px;
 }
 
 .running-bar span {
     margin: 0 20px;
     color: var(--gold);
 }
-
 
 /* ================= SECTIONS ================= */
 
